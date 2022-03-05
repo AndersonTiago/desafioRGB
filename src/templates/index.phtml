@@ -1,0 +1,61 @@
+<?php 
+    $row =  count($res);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#"><img id="imgLogo" src="./imagens/logo.png" alt="RGB"></a>
+        <span>00000000000000</span>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Pagina 1</a></li>
+                <li><a href="#">Pagina 2</a></li>
+                <li><a href="#">Pagina 3</a></li>
+                <li><a href="#">Pagina 4</a></li>
+                <li><a href="#">Pagina 5</a></li>
+                <li><a href="#">Pagina 6</a></li>
+                <li><a href="#">Pagina 7</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <hr>
+    <section class="flex row">        
+        <?php           
+            for($i = 0; $i < $row; $i ++) {
+                echo '<div class="column">';
+                echo '<img class="hover-shadow" src="./imagens/'.$res[$i]['nome'].'.jpg" onclick="openModal(this.id);currentSlide('.$res[$i]['id'].')" height="165px">';
+                echo '<h3>'.$res[$i]['titulo'].'</h3>';
+                echo '<p>'.$res[$i]['descricao'].'</p>';
+                echo '<hr>';
+                echo '</div>';
+            }
+        ?>
+    </section>
+
+    <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <?php 
+        for($i = 0; $i < $row; $i ++) {
+            echo '<div class="mySlides">';
+            echo '<img class="img_modal" src="./imagens/'.$res[$i]['nome'].'.jpg">';
+            echo '</div>';
+        }
+    ?>
+  </div>
+</div>
+
+<script src="./js/app.js"></script>
+</body>
+</html>

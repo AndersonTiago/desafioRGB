@@ -1,0 +1,177 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(167, 164, 164);
+}
+
+body {
+    margin-bottom:100px ;
+    background-image: url('../imagens/background-site.png');
+}
+
+h1 {
+    text-align: center;
+    margin-top: white;
+}
+
+#imgLogo{
+    height: 80px;
+    opacity: .8;
+}
+
+img {
+    max-width: 100%;
+    display: block;  
+    cursor: pointer; 
+}
+
+.header {
+    background-image: url('../imagens/background-site.png');
+    display: flex;    
+    flex-wrap: wrap; /*quando a tela fica muito pequena, os itens são jogados para baixo*/
+    max-width: 1200px;
+    justify-content: space-between; /* Espaço entre os itens */   
+    align-items: center; /*alinha os itens no centro (verticalmente)*/
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex; /* coloca os itens na orizontal */
+}
+
+.menu li {
+    margin-left: 1.5rem;
+}
+
+.menu li a {
+    display: block;
+    padding: 0.5rem;
+}
+
+.menu li a:hover {
+    color: black;
+}
+/* CSS FLEXBOX */
+
+.flex {
+    display:  flex;
+    flex-wrap: wrap;
+    max-width: 1258px;
+    margin: 0 auto;
+}
+
+.flex > div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+/* -------------------------------------------------- */
+
+.row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    width: 1200px;
+    height: 535px;
+    display: none;
+  }
+  
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  .img_modal {
+    width: 100%;
+  }
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
