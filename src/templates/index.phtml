@@ -63,7 +63,7 @@
             }
         ?>
     </section>
-
+    <hr>
     <section class="infoEmpresa">
         <div class="infoEmpresa-item">
             <img src="./imagens/img-empresa.jpg" alt="Empresa">
@@ -74,7 +74,7 @@
         </div>
         <div class="infoEmpresa-item">
             <p>Facebook</p><br>
-            <p>Email</p>
+            <p><?php echo $abt2[0]['email'];?></p>
         </div>
     </section>
 
@@ -93,6 +93,16 @@
     </div>
     </div>
 
+    <footer>
+        <div class="footer_description">
+            <div class="direitos">
+                <p>Todos os direitos reservados - &copy; 2012</p>
+            </div>
+            <div>
+                <p>Linha Fast | <small>comunicação.com.br</small></p>
+            </div>
+        </div>     
+    </footer>
 <script src="./js/app.js"></script>
 </body>
 </html>
