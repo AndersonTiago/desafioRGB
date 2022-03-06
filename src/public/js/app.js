@@ -30,3 +30,19 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+document.querySelector('.mobile-menu').addEventListener('click', function(){
+  let mobileMenu = document.querySelector('.mobile-menu');
+  let navList = document.querySelector('.menu');
+  let navLinks = document.querySelectorAll('.menu li');
+  let activeClass = "active";
+
+  navList.classList.toggle(activeClass);
+  mobileMenu.classList.toggle(activeClass);
+
+  navLinks.forEach((link) => {
+    link.style.animation 
+      ? (link.style.animation = "") 
+      : (link.style.animation = `navLinkFade 0.5s ease forwards 0.3s`)
+  });
+})

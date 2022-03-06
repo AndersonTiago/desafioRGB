@@ -11,23 +11,37 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="header">
+
+<header class="header">
         <a href="#"><img id="imgLogo" src="./imagens/logo.png" alt="RGB"></a>
-        <span>00000000000000</span>
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Pagina 1</a></li>
-                <li><a href="#">Pagina 2</a></li>
-                <li><a href="#">Pagina 3</a></li>
-                <li><a href="#">Pagina 4</a></li>
-                <li><a href="#">Pagina 5</a></li>
-                <li><a href="#">Pagina 6</a></li>
-                <li><a href="#">Pagina 7</a></li>
-            </ul>
-        </nav>
         
+        <div class="menuPag">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="phone">
+                <!-- <h3><small>(00)</small> <?php echo $abt2[0]['telefone'];?></h3> -->
+            </div>
+            <div class="paginacao">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="#">Pagina 1</a></li>
+                        <li><a href="#">Pagina 2</a></li>
+                        <li><a href="#">Pagina 3</a></li>
+                        <li><a href="#">Pagina 4</a></li>
+                        <li><a href="#">Pagina 5</a></li>
+                        <li><a href="#">Pagina 6</a></li>
+                        <li><a href="#">Pagina 7</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
+
     <hr>
+
     <section class="flex row">        
         <?php           
             for($i = 0; $i < $row; $i ++) {
@@ -41,20 +55,34 @@
         ?>
     </section>
 
-    <!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
+    <section class="infoEmpresa">
+        <div class="infoEmpresa-item">
+            <img src="./imagens/img-empresa.jpg" alt="Empresa">
+        </div>
+        <div class="infoEmpresa-item">
+            <h4>Pessoa ou Empresa</h4>
+            <p><?php echo $abt2[0]['sobre'];?></p>
+        </div>
+        <div class="infoEmpresa-item">
+            <p>Facebook</p><br>
+            <p>Email</p>
+        </div>
+    </section>
 
-    <?php 
-        for($i = 0; $i < $row; $i ++) {
-            echo '<div class="mySlides">';
-            echo '<img class="img_modal" src="./imagens/'.$res[$i]['nome'].'.jpg">';
-            echo '</div>';
-        }
-    ?>
-  </div>
-</div>
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <?php 
+            for($i = 0; $i < $row; $i ++) {
+                echo '<div class="mySlides">';
+                echo '<img class="img_modal" src="./imagens/'.$res[$i]['nome'].'.jpg">';
+                echo '</div>';
+            }
+        ?>
+    </div>
+    </div>
 
 <script src="./js/app.js"></script>
 </body>

@@ -19,6 +19,16 @@ class ImagemMapper{
         return $res;
     }
 
+    public function getInfo() {
+        $sql = "SELECT * FROM infoEmpresa";
+        
+        $stmt = $this->db->query($sql);
+
+        $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        return $res;
+    }
+
     public function save($data) {        
         $sql = "INSERT INTO imagens (nome,titulo,descricao) VALUES (:NOME, :TITULO, :DESCRICAO)";
         $stmt = $this->db->prepare($sql);

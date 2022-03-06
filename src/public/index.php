@@ -29,8 +29,9 @@ $container['db'] = function ($c) {
 $app->get('/home', function (Request $request, Response $response) {
     $mapper = new ImagemMapper($this->db);
     $res = $mapper->getImagens();
+    $about = $mapper->getInfo(); 
 
-    $response = $this->view->render($response, "index.phtml", ["res" => $res]);
+    $response = $this->view->render($response, "index.phtml", ["res" => $res, "abt2"=> $about]);
     return $response;
 });
 
