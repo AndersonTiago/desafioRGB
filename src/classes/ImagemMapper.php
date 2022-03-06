@@ -8,7 +8,6 @@ class ImagemMapper{
         $this->db = $db;
     }
 
-    
     public function getImagens() {
         $sql = "SELECT * FROM imagens";
         

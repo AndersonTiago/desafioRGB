@@ -31,7 +31,7 @@ $app->get('/home', function (Request $request, Response $response) {
     $res = $mapper->getImagens();
     $about = $mapper->getInfo(); 
 
-    $response = $this->view->render($response, "index.phtml", ["res" => $res, "abt2"=> $about]);
+    $response = $this->view->render($response, "index.phtml", ["res" => $res, "abt2"=> $about, "limit"=>25]);
     return $response;
 });
 

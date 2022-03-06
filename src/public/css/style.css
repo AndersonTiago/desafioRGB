@@ -211,7 +211,7 @@ img {
   .mobile-menu div{
     width: 32px;
     height: 2px;
-    background-color: #fff;
+    background-color: black;
     margin: 8px;
     transition: 1s;
   }
